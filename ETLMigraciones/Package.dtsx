@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{308B66CD-D059-4D4D-BB2D-D620E9C02096}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{E59C340F-9DFD-4A79-A7CC-90811E3C96F5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -48,7 +48,6 @@
           DTS:refId="Package\Creacion de tablas Dimension\Create Dimension Acuerdos"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{1EAD3F14-4AB8-46E4-BDDC-79CD00F36C4F}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -66,7 +65,6 @@
           DTS:refId="Package\Creacion de tablas Dimension\Create Dimension Eventos"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{67CF7165-C690-4F2F-B8AC-C02B8280DE31}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -101,7 +99,6 @@
           DTS:refId="Package\Creacion de tablas Dimension\Create Dimension Modalidades"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{BE392744-2114-4715-BF42-CFAF0965C25A}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -119,7 +116,6 @@
           DTS:refId="Package\Creacion de tablas Dimension\Create Dimension Organizadores"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{E0FFC6AB-5A79-4332-9BEC-213ECCFEDF86}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -137,7 +133,6 @@
           DTS:refId="Package\Creacion de tablas Dimension\Create Dimension Paises"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{1CC4A358-69B9-4589-AEFB-8F551511ADB4}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -155,7 +150,6 @@
           DTS:refId="Package\Creacion de tablas Dimension\Create Dimension Regiones"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{5502FD81-A844-44BD-B299-ACC1E6DD5C8E}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -190,7 +184,6 @@
           DTS:refId="Package\Creacion de tablas Dimension\Create Dimension Tipos de Acuerdo"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{BD37AC29-778B-45DC-A197-E8B090652CE5}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -208,7 +201,6 @@
           DTS:refId="Package\Creacion de tablas Dimension\Create Dimension UND Organica"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{D7A4A436-5E7D-4F56-BD52-FAF4E0C21231}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -320,7 +312,6 @@
           DTS:refId="Package\Creacion de tablas Hecho\Create Hecho Control de Acuerdos"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{5B0B0B95-EA3C-4A96-BA47-7CE3A7075399}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -338,7 +329,6 @@
           DTS:refId="Package\Creacion de tablas Hecho\Create Hecho Control de Eventos"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{0152DA36-91F7-4E02-8CC9-3B6103119E70}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -393,7 +383,6 @@
       DTS:refId="Package\Creacion de tablas Stage"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:Disabled="True"
       DTS:DTSID="{9394BF5C-8D84-4739-9ACD-0D7724346688}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -448,7 +437,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
-              SQLTask:SqlStatementSource="CREATE TABLE STG.Eventos&#xA;(&#xA;IdEvento INT PRIMARY KEY,&#xA;FInicio DATE,&#xA;FFin DATE,&#xA;Dias INT,&#xA;Localidad NVARCHAR(10),&#xA;Modalidad NVARCHAR(15),&#xA;Region NVARCHAR(25),&#xA;UND_Organica NVARCHAR(35),&#xA;Informe NVARCHAR(4)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="CREATE TABLE STG.Eventos&#xA;(&#xA;IdEvento INT PRIMARY KEY,&#xA;Evento NVARCHAR(250),&#xA;Organizador NVARCHAR(250),&#xA;FInicio DATE,&#xA;FFin DATE,&#xA;Dias INT,&#xA;Localidad NVARCHAR(10),&#xA;Modalidad NVARCHAR(15),&#xA;Region NVARCHAR(25),&#xA;UND_Organica NVARCHAR(35),&#xA;Informe NVARCHAR(4)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -510,7 +499,6 @@
           DTS:refId="Package\Insert data tablas Dmension\Insert Dimension Acuerdos"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{AC4070B7-F352-4CFC-BC28-72C0847D336D}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -528,7 +516,6 @@
           DTS:refId="Package\Insert data tablas Dmension\Insert Dimension Eventos"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{985262A4-4801-4F7F-9557-B7565221207D}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -540,24 +527,6 @@
             <SQLTask:SqlTaskData
               SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
               SQLTask:SqlStatementSource="INSERT DW.DimEventos&#xA;(Nombre)&#xA;SELECT DISTINCT E.[Evento]&#xA;FROM [STG].[Eventos] E;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Insert data tablas Dmension\Insert Dimension Fases de Produccion"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
-          DTS:DTSID="{67FE205A-762A-42FD-8645-DF38000F8892}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Insert Dimension Fases de Produccion"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
-              SQLTask:SqlStatementSource="INSERT [DW].[DimFasesProduccion]&#xA;([Nombre])&#xA;SELECT DISTINCT [Fase]&#xA;FROM [STG].[Produccion]&#xA;ORDER BY  [Fase] DESC;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -581,7 +550,6 @@
           DTS:refId="Package\Insert data tablas Dmension\Insert Dimension Modalidades"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{9CC862B2-F8E2-489A-8984-CA9B58BC6F1E}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -599,7 +567,6 @@
           DTS:refId="Package\Insert data tablas Dmension\Insert Dimension Organizadores"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{A89CC33E-E698-4927-B550-8DCE65E7F4E1}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -617,7 +584,6 @@
           DTS:refId="Package\Insert data tablas Dmension\Insert Dimension Paises"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{953C5CE6-1A98-4152-8933-551EED259545}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -635,7 +601,6 @@
           DTS:refId="Package\Insert data tablas Dmension\Insert Dimension Regiones"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{0E84A01F-C0D1-41C4-89A8-E6B879968279}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -670,7 +635,6 @@
           DTS:refId="Package\Insert data tablas Dmension\Insert Dimension Tipos de Acuerdo"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{2C69C39A-1F84-4B0D-95C6-06D72AE1B1E7}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -688,7 +652,6 @@
           DTS:refId="Package\Insert data tablas Dmension\Insert Dimension UND Organica"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{84A5FE99-D887-4394-B367-3F43E947E5D2}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -732,11 +695,11 @@
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Insert data tablas Dmension.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
-          DTS:DTSID="{D0293C65-59C2-4B01-9790-F4205DF542A4}"
+          DTS:DTSID="{DC7BA377-5007-4362-9B79-CF4D9751E715}"
           DTS:From="Package\Insert data tablas Dmension\Insert Dimension Metas Produccion"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
-          DTS:To="Package\Insert data tablas Dmension\Insert Dimension Fases de Produccion" />
+          DTS:To="Package\Insert data tablas Dmension\Insert Dimension Acuerdos" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Insert data tablas Dmension.PrecedenceConstraints[Constraint 10]"
           DTS:CreationName=""
@@ -745,14 +708,6 @@
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 10"
           DTS:To="Package\Insert data tablas Dmension\Insert Dimension Tiempo" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Insert data tablas Dmension.PrecedenceConstraints[Constraint 2]"
-          DTS:CreationName=""
-          DTS:DTSID="{5C37D895-4E46-4074-83C9-82C4FCA92768}"
-          DTS:From="Package\Insert data tablas Dmension\Insert Dimension Fases de Produccion"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 2"
-          DTS:To="Package\Insert data tablas Dmension\Insert Dimension Acuerdos" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Insert data tablas Dmension.PrecedenceConstraints[Constraint 3]"
           DTS:CreationName=""
@@ -825,7 +780,6 @@
           DTS:refId="Package\Insert data tablas Hecho\Insert Hecho Control de Acuerdos"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{2E4709DC-2321-4720-A0CE-131FA0C935D8}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -843,7 +797,6 @@
           DTS:refId="Package\Insert data tablas Hecho\Insert Hecho Control de Eventos"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:Disabled="True"
           DTS:DTSID="{96372B85-8DCF-4E7E-9247-DAB810A2236F}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -923,7 +876,6 @@
       DTS:refId="Package\Insertar data Stage"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:Disabled="True"
       DTS:DTSID="{A8190F6D-1C39-4B30-9FFE-82910B52A410}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -1059,7 +1011,6 @@
       DTS:refId="Package\Preparar Stage"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:Disabled="True"
       DTS:DTSID="{14E16D9D-E4AB-405C-80B3-AF24E88BFDB1}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -1428,20 +1379,20 @@
           Id="Package\Creacion de tablas Dimension"
           TopLeft="321.887760583757,729.547060246085" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="164,60.8"
           Id="Package\Creacion de tablas Hecho\Create Hecho Control de Acuerdos"
           TopLeft="32.2612356113627,87.0890804563722" />
         <NodeLayout
           Size="174.4,41.6"
           Id="Package\Creacion de tablas Hecho\Create Hecho Control de Eventos"
-          TopLeft="29.2000110694347,160.282358793805" />
+          TopLeft="27.0571538900848,176.341182548436" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\Creacion de tablas Hecho\Create Hecho POI"
           TopLeft="34.302051972648,18.9378163517317" />
         <EdgeLayout
           Id="Package\Creacion de tablas Hecho.PrecedenceConstraints[Constraint]"
-          TopLeft="117.081643792005,60.5378163517317">
+          TopLeft="114.881643792005,60.5378163517317">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1463,18 +1414,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Creacion de tablas Hecho.PrecedenceConstraints[Constraint 1]"
-          TopLeft="117.530623340399,128.689080456372">
+          TopLeft="114.259194750724,147.889080456372">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31.5932783374324"
+              EndConnector="0,28.4521020920635"
               Start="0,0"
-              End="0,24.0932783374324">
+              End="0,20.9521020920635">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.0932783374324" />
+                    End="0,20.9521020920635" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1486,8 +1437,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="240.8,264.8"
-          Size="240.8,308"
+          PanelSize="243.2,285.6"
+          Size="243.2,328.8"
           Id="Package\Creacion de tablas Hecho"
           TopLeft="635.714296540436,730.08403367473" />
         <NodeLayout
@@ -1588,13 +1539,9 @@
           Id="Package\Insert data tablas Dmension\Insert Dimension Eventos"
           TopLeft="41.1102155855032,286.816812360823" />
         <NodeLayout
-          Size="176,41.6"
-          Id="Package\Insert data tablas Dmension\Insert Dimension Fases de Produccion"
-          TopLeft="33.9673583210035,152.800006771889" />
-        <NodeLayout
           Size="161.6,41.6"
           Id="Package\Insert data tablas Dmension\Insert Dimension Metas Produccion"
-          TopLeft="33.967358321004,82.7831980574682" />
+          TopLeft="33.967358321004,82.0184921643905" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\Insert data tablas Dmension\Insert Dimension Modalidades"
@@ -1633,36 +1580,14 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,25.9546237899124"
+              EndConnector="0,25.1899178968347"
               Start="0,0"
-              End="0,18.4546237899124">
+              End="0,17.6899178968347">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.4546237899124" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Insert data tablas Dmension.PrecedenceConstraints[Constraint 1]"
-          TopLeft="118.367358321004,124.383198057468">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28.416808714421"
-              Start="0,0"
-              End="0,20.916808714421">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.916808714421" />
+                    End="0,17.6899178968347" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1685,28 +1610,6 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,18.6310933868773" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Insert data tablas Dmension.PrecedenceConstraints[Constraint 2]"
-          TopLeft="121.628582862932,194.400006771889">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26.1310933868776"
-              Start="0,0"
-              End="0,18.6310933868776">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.6310933868776" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1869,13 +1772,35 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insert data tablas Dmension.PrecedenceConstraints[Constraint 1]"
+          TopLeft="118.028582862932,123.618492164391">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,96.9126079943765"
+              Start="0,0"
+              End="0,89.4126079943765">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,89.4126079943765" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="244.8,893.6"
           Size="244.8,936.8"
           Id="Package\Insert data tablas Dmension"
-          TopLeft="936.734709830048,726.890762890557" />
+          TopLeft="936.020424103598,726.126056997479" />
         <NodeLayout
           Size="182.4,41.6"
           Id="Package\Insert data tablas Hecho\Insert Hecho Control de Acuerdos"
@@ -2206,9 +2131,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="45.026535956679,-305.063026571355"
+              EndConnector="45.026535956679,-294.663026571355"
               Start="0,0"
-              End="37.526535956679,-305.063026571355">
+              End="37.526535956679,-294.663026571355">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2219,13 +2144,13 @@
                     Point2="22.5132679783395,0"
                     Point3="22.5132679783395,-4" />
                   <mssgle:LineSegment
-                    End="22.5132679783395,-301.063026571355" />
+                    End="22.5132679783395,-290.663026571355" />
                   <mssgle:CubicBezierSegment
-                    Point1="22.5132679783395,-301.063026571355"
-                    Point2="22.5132679783395,-305.063026571355"
-                    Point3="26.5132679783395,-305.063026571355" />
+                    Point1="22.5132679783395,-290.663026571355"
+                    Point2="22.5132679783395,-294.663026571355"
+                    Point3="26.5132679783395,-294.663026571355" />
                   <mssgle:LineSegment
-                    End="37.526535956679,-305.063026571355" />
+                    End="37.526535956679,-294.663026571355" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2236,30 +2161,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="876.514296540436,884.08403367473">
+          TopLeft="878.914296540436,894.48403367473">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="60.2204132896123,311.206729215827"
+              EndConnector="57.1061275631624,300.042023322749"
               Start="0,0"
-              End="52.7204132896123,311.206729215827">
+              End="49.6061275631624,300.042023322749">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="26.1102066448062,0" />
+                    End="24.5530637815812,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="26.1102066448062,0"
-                    Point2="30.1102066448062,0"
-                    Point3="30.1102066448062,4" />
+                    Point1="24.5530637815812,0"
+                    Point2="28.5530637815812,0"
+                    Point3="28.5530637815812,4" />
                   <mssgle:LineSegment
-                    End="30.1102066448062,307.206729215827" />
+                    End="28.5530637815812,296.042023322749" />
                   <mssgle:CubicBezierSegment
-                    Point1="30.1102066448062,307.206729215827"
-                    Point2="30.1102066448062,311.206729215827"
-                    Point3="34.1102066448062,311.206729215827" />
+                    Point1="28.5530637815812,296.042023322749"
+                    Point2="28.5530637815812,300.042023322749"
+                    Point3="32.5530637815812,300.042023322749" />
                   <mssgle:LineSegment
-                    End="52.7204132896123,311.206729215827" />
+                    End="49.6061275631624,300.042023322749" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2270,30 +2195,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="1181.53470983005,1195.29076289056">
+          TopLeft="1180.8204241036,1194.52605699748">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="57.2816375639318,-288.013453014145"
+              EndConnector="57.9959232903816,-287.248747121067"
               Start="0,0"
-              End="49.7816375639318,-288.013453014145">
+              End="50.4959232903816,-287.248747121067">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="24.6408187819659,0" />
+                    End="24.9979616451908,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="24.6408187819659,0"
-                    Point2="28.6408187819659,0"
-                    Point3="28.6408187819659,-4" />
+                    Point1="24.9979616451908,0"
+                    Point2="28.9979616451908,0"
+                    Point3="28.9979616451908,-4" />
                   <mssgle:LineSegment
-                    End="28.6408187819659,-284.013453014145" />
+                    End="28.9979616451908,-283.248747121067" />
                   <mssgle:CubicBezierSegment
-                    Point1="28.6408187819659,-284.013453014145"
-                    Point2="28.6408187819659,-288.013453014145"
-                    Point3="32.6408187819659,-288.013453014145" />
+                    Point1="28.9979616451908,-283.248747121067"
+                    Point2="28.9979616451908,-287.248747121067"
+                    Point3="32.9979616451908,-287.248747121067" />
                   <mssgle:LineSegment
-                    End="49.7816375639318,-288.013453014145" />
+                    End="50.4959232903816,-287.248747121067" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
