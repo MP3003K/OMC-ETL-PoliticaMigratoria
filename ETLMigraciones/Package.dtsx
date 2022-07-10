@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="49"
-  DTS:VersionGUID="{A87337D2-B8B0-4613-9279-A05DBF591B3E}">
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{8AF69EFD-812C-4B4B-8344-47B2EE274D8E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -339,7 +339,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
-              SQLTask:SqlStatementSource="CREATE TABLE DW.HechoControlDeEventos(&#xA;IdControl INT IDENTITY(1,1) PRIMARY KEY,&#xA;IdEvento INT,&#xA;IdOrganizador INT,&#xA;IdPais INT,&#xA;IdFechaInicio DATE,&#xA;IdFechaFin DATE,&#xA;IdModalidad INT,&#xA;IdRegion INT,&#xA;IdUNDOrganica INT,&#xA;Informe NVARCHAR(2),&#xA;CONSTRAINT FK_CE_Evento FOREIGN KEY ( IdEvento )&#xA;REFERENCES DW.DimEventos ( IdEvento ),&#xA;CONSTRAINT FK_CE_Organizadores FOREIGN KEY ( IdOrganizador )&#xA;REFERENCES DW.DimOrganizadores ( IdOrganizador),&#xA;CONSTRAINT FK_CE_Paises FOREIGN KEY ( IdPais )&#xA;REFERENCES DW.DimPaises ( IdPais ),&#xA;CONSTRAINT FK_CE_Tiempo_Inicio FOREIGN KEY ( IdFechaInicio )&#xA;REFERENCES DW.DimTiempo ( IdFecha ),&#xA;CONSTRAINT FK_CE_Tiempo_Fin FOREIGN KEY ( IdFechaFin )&#xA;REFERENCES DW.DimTiempo ( IdFecha ),&#xA;CONSTRAINT FK_CE_Modalidades FOREIGN KEY ( IdModalidad )&#xA;REFERENCES DW.DimModalidades ( IdModalidad ),&#xA;CONSTRAINT FK_CE_Regiones FOREIGN KEY ( IdRegion )&#xA;REFERENCES DW.DimRegiones ( id_region),&#xA;CONSTRAINT FK_CE_UNDOrganica FOREIGN KEY ( IdUNDOrganica )&#xA;REFERENCES DW.DimUNDOrganica ( IdUND ),&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="&#xA;CREATE TABLE DW.HechoControlDeEventos(&#xA;IdControl INT IDENTITY(1,1) PRIMARY KEY,&#xA;IdEvento INT,&#xA;IdOrganizador INT,&#xA;IdPais INT,&#xA;IdFechaFin DATE,&#xA;IdModalidad INT,&#xA;IdRegion INT,&#xA;IdUNDOrganica INT,&#xA;Informe NVARCHAR(2),&#xA;CONSTRAINT FK_CE_Evento FOREIGN KEY ( IdEvento )&#xA;REFERENCES DW.DimEventos ( IdEvento ),&#xA;CONSTRAINT FK_CE_Organizadores FOREIGN KEY ( IdOrganizador )&#xA;REFERENCES DW.DimOrganizadores ( IdOrganizador),&#xA;CONSTRAINT FK_CE_Paises FOREIGN KEY ( IdPais )&#xA;REFERENCES DW.DimPaises ( IdPais ),&#xA;CONSTRAINT FK_CE_Tiempo_Fin FOREIGN KEY ( IdFechaFin )&#xA;REFERENCES DW.DimTiempo ( IdFecha ),&#xA;CONSTRAINT FK_CE_Modalidades FOREIGN KEY ( IdModalidad )&#xA;REFERENCES DW.DimModalidades ( IdModalidad ),&#xA;CONSTRAINT FK_CE_Regiones FOREIGN KEY ( IdRegion )&#xA;REFERENCES DW.DimRegiones ( id_region),&#xA;CONSTRAINT FK_CE_UNDOrganica FOREIGN KEY ( IdUNDOrganica )&#xA;REFERENCES DW.DimUNDOrganica ( IdUND ),&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -807,7 +807,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
-              SQLTask:SqlStatementSource="INSERT DW.HechoControlDeEventos&#xA;(IdEvento , IdOrganizador , IdPais , IdFechaInicio , IdFechaFin, IdModalidad , IdRegion , IdUNDOrganica , Informe)&#xA;SELECT DE.IdEvento, DO.IdOrganizador , DP.IdPais , DTI.IdFecha, DTF.IdFecha , DM.IdModalidad , DR.id_region , DUN.IdUND ,&#xA;UPPER(SUBSTRING(E.Informe, 1 , 1 )) + LOWER(SUBSTRING(E.Informe, LEN(E.Informe),LEN(E.Informe)))&#xA;FROM &#xA;STG.Eventos E&#xA;LEFT JOIN DW.DimEventos DE ON DE.Nombre = E.Evento&#xA;LEFT JOIN DW.DimOrganizadores DO ON DO.Nombre = E.Organizador&#xA;LEFT JOIN DW.DimPaises DP ON DP.Nombre = E.Localidad&#xA;LEFT JOIN DW.DimTiempo DTI ON DTI.IdFecha = E.FInicio&#xA;LEFT JOIN DW.DimTiempo DTF ON DTF.IdFecha = E.FFin&#xA;LEFT JOIN DW.DimModalidades DM on DM.Nombre = E.Modalidad&#xA;LEFT JOIN DW.DimRegiones DR ON DR.nombre = E.Region&#xA;LEFT JOIN DW.DimUNDOrganica DUN ON DUN.Nombre = E.UND_Organica;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="&#xA;INSERT DW.HechoControlDeEventos&#xA;(IdEvento , IdOrganizador , IdPais  , IdFechaFin, IdModalidad , IdRegion , IdUNDOrganica , Informe)&#xA;SELECT DE.IdEvento, DO.IdOrganizador , DP.IdPais , DTF.IdFecha , DM.IdModalidad , DR.id_region , DUN.IdUND ,&#xA;UPPER(SUBSTRING(E.Informe, 1 , 1 )) + LOWER(SUBSTRING(E.Informe, LEN(E.Informe),LEN(E.Informe)))&#xA;FROM &#xA;STG.Eventos E&#xA;LEFT JOIN DW.DimEventos DE ON DE.Nombre = E.Evento&#xA;LEFT JOIN DW.DimOrganizadores DO ON DO.Nombre = E.Organizador&#xA;LEFT JOIN DW.DimPaises DP ON DP.Nombre = E.Localidad&#xA;LEFT JOIN DW.DimTiempo DTF ON DTF.IdFecha = E.FFin&#xA;LEFT JOIN DW.DimModalidades DM on DM.Nombre = E.Modalidad&#xA;LEFT JOIN DW.DimRegiones DR ON DR.nombre = E.Region&#xA;LEFT JOIN DW.DimUNDOrganica DUN ON DUN.Nombre = E.UND_Organica;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -1381,7 +1381,7 @@
         <NodeLayout
           Size="164,60.8"
           Id="Package\Creacion de tablas Hecho\Create Hecho Control de Acuerdos"
-          TopLeft="32.2612356113627,87.0890804563722" />
+          TopLeft="31.5469498849129,86.3243745632946" />
         <NodeLayout
           Size="174.4,41.6"
           Id="Package\Creacion de tablas Hecho\Create Hecho Control de Eventos"
@@ -1392,18 +1392,18 @@
           TopLeft="34.302051972648,18.9378163517317" />
         <EdgeLayout
           Id="Package\Creacion de tablas Hecho.PrecedenceConstraints[Constraint]"
-          TopLeft="114.881643792005,60.5378163517317">
+          TopLeft="114.52450092878,60.5378163517317">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,26.5512641046405"
+              EndConnector="0,25.7865582115628"
               Start="0,0"
-              End="0,19.0512641046405">
+              End="0,18.2865582115628">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.0512641046405" />
+                    End="0,18.2865582115628" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1414,18 +1414,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Creacion de tablas Hecho.PrecedenceConstraints[Constraint 1]"
-          TopLeft="114.259194750724,147.889080456372">
+          TopLeft="113.902051887499,147.124374563295">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,28.4521020920635"
+              EndConnector="0,29.2168079851414"
               Start="0,0"
-              End="0,20.9521020920635">
+              End="0,21.7168079851414">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.9521020920635" />
+                    End="0,21.7168079851414" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1802,13 +1802,13 @@
           Id="Package\Insert data tablas Dmension"
           TopLeft="936.020424103598,726.126056997479" />
         <NodeLayout
-          Size="182.4,41.6"
+          Size="151.2,54.4"
           Id="Package\Insert data tablas Hecho\Insert Hecho Control de Acuerdos"
-          TopLeft="39.2081822727587,148.808410061225" />
+          TopLeft="49.7857150398954,147.27899827507" />
         <NodeLayout
           Size="187.2,41.6"
           Id="Package\Insert data tablas Hecho\Insert Hecho Control de Eventos"
-          TopLeft="41.0653242662427,222.5815173423" />
+          TopLeft="38.2081813604436,251.640341279251" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\Insert data tablas Hecho\Insert Hecho POI"
@@ -1819,18 +1819,18 @@
           TopLeft="48.5428636507111,8.80000072928033" />
         <EdgeLayout
           Id="Package\Insert data tablas Hecho.PrecedenceConstraints[Constraint]"
-          TopLeft="128.897978279751,124.097484761491">
+          TopLeft="126.386744663319,124.097484761491">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,24.7109252997338"
+              EndConnector="0,23.1815135135786"
               Start="0,0"
-              End="0,17.2109252997338">
+              End="0,15.6815135135786">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.2109252997338" />
+                    End="0,15.6815135135786" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1841,18 +1841,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Insert data tablas Hecho.PrecedenceConstraints[Constraint 1]"
-          TopLeft="132.536753269501,190.408410061225">
+          TopLeft="128.59694820017,201.67899827507">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32.1731072810753"
+              EndConnector="0,49.961343004181"
               Start="0,0"
-              End="0,24.6731072810753">
+              End="0,42.461343004181">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.6731072810753" />
+                    End="0,42.461343004181" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1886,8 +1886,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="253.6,320.8"
-          Size="253.6,364"
+          PanelSize="281.6,344.8"
+          Size="281.6,388"
           Id="Package\Insert data tablas Hecho"
           TopLeft="1238.81634739398,725.277309876412" />
         <NodeLayout
@@ -2127,7 +2127,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="590.687760583757,1189.14706024609">
+          TopLeft="590.687760583757,1189.14706024608">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2165,26 +2165,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="57.1061275631624,300.042023322749"
+              EndConnector="57.106127563162,300.042023322749"
               Start="0,0"
-              End="49.6061275631624,300.042023322749">
+              End="49.606127563162,300.042023322749">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="24.5530637815812,0" />
+                    End="24.553063781581,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="24.5530637815812,0"
-                    Point2="28.5530637815812,0"
-                    Point3="28.5530637815812,4" />
+                    Point1="24.553063781581,0"
+                    Point2="28.553063781581,0"
+                    Point3="28.553063781581,4" />
                   <mssgle:LineSegment
-                    End="28.5530637815812,296.042023322749" />
+                    End="28.553063781581,296.042023322749" />
                   <mssgle:CubicBezierSegment
-                    Point1="28.5530637815812,296.042023322749"
-                    Point2="28.5530637815812,300.042023322749"
-                    Point3="32.5530637815812,300.042023322749" />
+                    Point1="28.553063781581,296.042023322749"
+                    Point2="28.553063781581,300.042023322749"
+                    Point3="32.553063781581,300.042023322749" />
                   <mssgle:LineSegment
-                    End="49.6061275631624,300.042023322749" />
+                    End="49.606127563162,300.042023322749" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2199,26 +2199,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="57.9959232903816,-287.248747121067"
+              EndConnector="57.9959232903821,-275.248747121067"
               Start="0,0"
-              End="50.4959232903816,-287.248747121067">
+              End="50.4959232903821,-275.248747121067">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="24.9979616451908,0" />
+                    End="24.997961645191,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="24.9979616451908,0"
-                    Point2="28.9979616451908,0"
-                    Point3="28.9979616451908,-4" />
+                    Point1="24.997961645191,0"
+                    Point2="28.997961645191,0"
+                    Point3="28.997961645191,-4" />
                   <mssgle:LineSegment
-                    End="28.9979616451908,-283.248747121067" />
+                    End="28.997961645191,-271.248747121067" />
                   <mssgle:CubicBezierSegment
-                    Point1="28.9979616451908,-283.248747121067"
-                    Point2="28.9979616451908,-287.248747121067"
-                    Point3="32.9979616451908,-287.248747121067" />
+                    Point1="28.997961645191,-271.248747121067"
+                    Point2="28.997961645191,-275.248747121067"
+                    Point3="32.997961645191,-275.248747121067" />
                   <mssgle:LineSegment
-                    End="50.4959232903816,-287.248747121067" />
+                    End="50.4959232903821,-275.248747121067" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
