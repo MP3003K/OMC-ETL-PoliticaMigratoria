@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="51"
-  DTS:VersionGUID="{8AF69EFD-812C-4B4B-8344-47B2EE274D8E}">
+  DTS:VersionBuild="55"
+  DTS:VersionGUID="{B9C339D4-8058-4DE6-947B-3480FA9B75CB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -40,7 +40,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE SCHEMA DW;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -57,7 +57,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE TABLE DW.DimAcuerdos&#xA;(&#xA;IdAcuerdo INT IDENTITY(1,1) PRIMARY KEY,&#xA;Nombre NVARCHAR(250),&#xA;Estado NVARCHAR(25)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -74,7 +74,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE TABLE DW.DimEventos&#xA;(&#xA;IdEvento INT IDENTITY(1,1) PRIMARY KEY,&#xA;Nombre NVARCHAR(250)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -91,7 +91,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE TABLE DW.DimMetasProduccion&#xA;(&#xA;IdMetaFisica INT IDENTITY(1,1) PRIMARY KEY,&#xA;Meta Nvarchar (300) NOT NULL,&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -108,7 +108,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE TABLE DW.DimModalidades&#xA;(&#xA;    IdModalidad INT IDENTITY(1,1) PRIMARY key,&#xA;    Nombre NVARCHAR(20)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -125,7 +125,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE TABLE DW.DimOrganizadores&#xA;(&#xA;IdOrganizador INT IDENTITY(1,1) PRIMARY KEY,&#xA;Nombre NVARCHAR(200)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -142,7 +142,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE TABLE DW.DimPaises&#xA;(&#xA;IdPais INT IDENTITY(1,1) PRIMARY KEY,&#xA;Nombre NVARCHAR(25)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -159,7 +159,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE TABLE DW.DimRegiones(&#xA;&#x9;id_region INT PRIMARY KEY NOT NULL IDENTITY(1,1),&#xA;&#x9;nombre NVARCHAR(50)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -176,7 +176,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE TABLE DW.DimTiempo&#xA;(&#xA;    IdFecha date not null primary key,&#xA;    Fecha int not null, &#xA;    Año smallint not null,&#xA;    Trimestre smallint not null,&#xA;    Mes smallint not null,&#xA;    Semana smallint not null,&#xA;    Dia smallint not null,&#xA;    DiaSemana smallint not null,&#xA;    NTrimestre char(7) not null,&#xA;    NMes char(15) not null,&#xA;    NMes3L char(3) not null,&#xA;    NSemana char(10) not null,&#xA;    NDia char(6) not null,&#xA;    NDiaSemana char(10) not null   &#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -193,7 +193,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE TABLE DW.DimTiposAcuerdo(&#xA;IdTipoAcuerdo INT IDENTITY(1,1) PRIMARY KEY,&#xA;Nombre NVARCHAR(50),&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -210,7 +210,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE TABLE DW.DimUNDOrganica&#xA;(&#xA;IdUND INT IDENTITY(1,1) PRIMARY KEY,&#xA;Nombre NVARCHAR(150)&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -321,7 +321,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="&#xA;CREATE TABLE DW.HechoControlDeAcuerdos&#xA;(&#xA;IdControl INT IDENTITY(1,1) PRIMARY KEY,&#xA;IdTipoAcuerdo INT,&#xA;IdAcuerdo INT,&#xA;IdFecha DATE,&#xA;IdPais INT,&#xA;CONSTRAINT FK_CDA_TipoAcuerdo FOREIGN KEY (IdTipoAcuerdo )&#xA;REFERENCES DW.DimTiposAcuerdo (IdTipoAcuerdo),&#xA;CONSTRAINT FK_CDA_AcuerdoS FOREIGN KEY ( IdAcuerdo )&#xA;REFERENCES DW.DimAcuerdos ( IdAcuerdo ),&#xA;CONSTRAINT FK_CDA_Fecha FOREIGN KEY ( IdFecha )&#xA;REFERENCES DW.DimTiempo (IdFecha),&#xA;CONSTRAINT FK_CDA_Pais FOREIGN KEY ( IdPais)&#xA;REFERENCES DW.DimPaises ( IdPais )&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -338,7 +338,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="&#xA;CREATE TABLE DW.HechoControlDeEventos(&#xA;IdControl INT IDENTITY(1,1) PRIMARY KEY,&#xA;IdEvento INT,&#xA;IdOrganizador INT,&#xA;IdPais INT,&#xA;IdFechaFin DATE,&#xA;IdModalidad INT,&#xA;IdRegion INT,&#xA;IdUNDOrganica INT,&#xA;Informe NVARCHAR(2),&#xA;CONSTRAINT FK_CE_Evento FOREIGN KEY ( IdEvento )&#xA;REFERENCES DW.DimEventos ( IdEvento ),&#xA;CONSTRAINT FK_CE_Organizadores FOREIGN KEY ( IdOrganizador )&#xA;REFERENCES DW.DimOrganizadores ( IdOrganizador),&#xA;CONSTRAINT FK_CE_Paises FOREIGN KEY ( IdPais )&#xA;REFERENCES DW.DimPaises ( IdPais ),&#xA;CONSTRAINT FK_CE_Tiempo_Fin FOREIGN KEY ( IdFechaFin )&#xA;REFERENCES DW.DimTiempo ( IdFecha ),&#xA;CONSTRAINT FK_CE_Modalidades FOREIGN KEY ( IdModalidad )&#xA;REFERENCES DW.DimModalidades ( IdModalidad ),&#xA;CONSTRAINT FK_CE_Regiones FOREIGN KEY ( IdRegion )&#xA;REFERENCES DW.DimRegiones ( id_region),&#xA;CONSTRAINT FK_CE_UNDOrganica FOREIGN KEY ( IdUNDOrganica )&#xA;REFERENCES DW.DimUNDOrganica ( IdUND ),&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -355,7 +355,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE TABLE DW.HechoPOI&#xA;(&#xA;IdProduccion INT IDENTITY(1,1) PRIMARY KEY,&#xA;IdMetaFisica INT,&#xA;IdFecha DATE,&#xA;ActProgramadas INT,&#xA;ActEjecutadas INT&#xA;CONSTRAINT FK_POI_MetaFisica FOREIGN KEY ( IdMetaFisica )&#xA;REFERENCES DW.DimMetasProduccion ( IdMetaFisica ),&#xA;CONSTRAINT FK_POI_Tiempo FOREIGN KEY ( IdFecha )&#xA;REFERENCES DW.DimTiempo ( IdFecha )&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -402,7 +402,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="&#xA;CREATE TABLE STG.Acuerdos&#xA;(&#xA;Id_Acuerdos INT IDENTITY(1,1) PRIMARY KEY,&#xA;TipoEvento NVARCHAR(50),&#xA;Acuerdo NVARCHAR(250),&#xA;Fecha DATE,&#xA;Periodo NVARCHAR(25),&#xA;Estado NVARCHAR(20),&#xA;Pais NVARCHAR(35)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -419,7 +419,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE SCHEMA STG;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -436,7 +436,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE TABLE STG.Eventos&#xA;(&#xA;IdEvento INT PRIMARY KEY,&#xA;Evento NVARCHAR(250),&#xA;Organizador NVARCHAR(250),&#xA;FInicio DATE,&#xA;FFin DATE,&#xA;Dias INT,&#xA;Localidad NVARCHAR(10),&#xA;Modalidad NVARCHAR(15),&#xA;Region NVARCHAR(25),&#xA;UND_Organica NVARCHAR(35),&#xA;Informe NVARCHAR(4)&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -453,7 +453,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="CREATE TABLE STG.Produccion&#xA;(&#xA;IdProduccion INT PRIMARY KEY,&#xA;MetaFisica NVARCHAR(250),&#xA;Mes smallint,&#xA;Año smallint,&#xA;ActividadesProgramadas INT,&#xA;ActividadesEjecutadas INT&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -508,7 +508,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="INSERT DW.DimAcuerdos&#xA;(Nombre,Estado)&#xA;SELECT DISTINCT A.Acuerdo, A.Estado&#xA;FROM [STG].[Acuerdos] A;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -525,7 +525,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="INSERT DW.DimEventos&#xA;(Nombre)&#xA;SELECT DISTINCT E.[Evento]&#xA;FROM [STG].[Eventos] E;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -542,7 +542,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="INSERT  [DW].[DimMetasProduccion]&#xA;([Meta])&#xA;SELECT DISTINCT M.[MetaFisica] &#xA;FROM STG.Produccion M ;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -559,7 +559,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="&#xA;INSERT DW.[DimModalidades]&#xA;(Nombre)&#xA;SELECT DISTINCT E.[Modalidad]&#xA;FROM [STG].[Eventos] E;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -576,7 +576,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="INSERT DW.[DimOrganizadores]&#xA;(Nombre)&#xA;SELECT DISTINCT E.[Organizador]&#xA;FROM [STG].[Eventos] E;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -593,7 +593,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="INSERT DW.DimPaises&#xA;(Nombre)&#xA;SELECT DISTINCT SUBSTRING(E.Localidad,1,1)+LOWER(SUBSTRING(E.Localidad,2,LEN(E.Localidad))) AS Pais&#xA;FROM STG.Eventos E&#xA;WHERE E.Localidad  NOT IN  ( SELECT E2.Nombre FROM DW.DimPaises E2);&#xA;&#xA;INSERT DW.DimPaises&#xA;(Nombre)&#xA;SELECT DISTINCT SUBSTRING(E.Pais,1,1)+LOWER(SUBSTRING(E.Pais,2,LEN(E.Pais))) AS Pais&#xA;FROM STG.Acuerdos E&#xA;WHERE E.Pais  NOT IN  ( SELECT E2.Nombre FROM DW.DimPaises E2);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -610,7 +610,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="INSERT DW.DimRegiones&#xA;(Nombre)&#xA;SELECT DISTINCT SUBSTRING(E.Region,1,1)+LOWER(SUBSTRING(E.Region,2,LEN(E.Region))) AS Pais&#xA;FROM STG.Eventos E&#xA;WHERE E.Region  NOT IN  ( SELECT R2.nombre FROM DW.DimRegiones R2)&#xA;AND E.Region IS NOT NULL;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -627,8 +627,8 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
-              SQLTask:SqlStatementSource="USE [DWMigraciones]&#xA;GO&#xA;Set Language spanish;&#xA;DECLARE @FechaDesde as smalldatetime, @FechaHasta as smalldatetime&#xA;DECLARE @FechaAAAAMMDD int&#xA;DECLARE @Año as smallint, @Trimestre char(2), @Mes smallint&#xA;DECLARE @Semana smallint, @Dia smallint, @DiaSemana smallint&#xA;DECLARE @NTrimestre char(7), @NMes char(15)&#xA;DECLARE @NMes3l char(3)&#xA;DECLARE @NSemana char(10), @NDia char(6), @NDiaSemana char(10)&#xA;--Set inicial por si no coincide con los del servidor&#xA;SET DATEFORMAT dmy&#xA;SET DATEFIRST 1&#xA;&#xA;BEGIN TRANSACTION&#xA;    --Borrar datos actuales, si fuese necesario&#xA;    --TRUNCATE TABLE FROM DI_TIEMPO&#xA;   &#xA;    --RAngo de fechas a generar: del 01/01/2006 al 31/12/Año actual+2&#xA;    SELECT @FechaDesde = CAST('20200101' AS smalldatetime)&#xA;    SELECT @FechaHasta = CAST('20220101' AS smalldatetime)&#xA;   &#xA;    WHILE (@FechaDesde &lt;= @FechaHasta) BEGIN&#xA;    SELECT @FechaAAAAMMDD = YEAR(@FechaDesde)*10000+&#xA;                            MONTH(@FechaDesde)*100+&#xA;                            DATEPART(dd, @FechaDesde)&#xA;    SELECT @Año = DATEPART(yy, @FechaDesde)&#xA;    SELECT @Trimestre = DATEPART(qq, @FechaDesde)&#xA;    SELECT @Mes = DATEPART(m, @FechaDesde)&#xA;    SELECT @Semana = DATEPART(wk, @FechaDesde)&#xA;    SELECT @Dia = RIGHT('0' + DATEPART(dd, @FechaDesde),2)&#xA;    SELECT @DiaSemana = DATEPART(DW, @FechaDesde)&#xA;    SELECT @NMes = DATENAME(mm, @FechaDesde)&#xA;    SELECT @NMes3l = LEFT(@NMes, 3)&#xA;    SELECT @NTrimestre = 'T' + CAST(@Trimestre as CHAR(1)) + '/' + RIGHT(@Año, 2)&#xA;    SELECT @NSemana = 'Sem ' +CAST(@Semana AS CHAR(2)) + '/' + RIGHT(RTRIM(CAST(@Año as CHAR(4))),2)&#xA;    SELECT @NDia = CAST(@Dia as CHAR(2)) + ' ' + RTRIM(@NMes)&#xA;    SELECT @NDiaSemana = DATENAME(dw, @FechaDesde)&#xA;    INSERT INTO DW.DimTiempo&#xA;    (&#xA;        idFecha,&#xA;        Fecha,&#xA;        Año,&#xA;        Trimestre,&#xA;        Mes,&#xA;        Semana,&#xA;        Dia,&#xA;        DiaSemana,&#xA;        NTrimestre,&#xA;        NMes,&#xA;        NMes3L,&#xA;        NSemana,&#xA;        NDia,&#xA;        NDiaSemana&#xA;    ) VALUES&#xA;    (&#xA;&#x9; @FechaDesde,&#xA;        @FechaAAAAMMDD,&#xA;        @Año,&#xA;        @Trimestre,&#xA;        @Mes,&#xA;        @Semana,&#xA;        @Dia,&#xA;        @DiaSemana,&#xA;        @NTrimestre,&#xA;        @NMes,&#xA;        @NMes3l,&#xA;        @NSemana,&#xA;        @NDia,&#xA;        @NDiaSemana&#xA;    )&#xA;   &#xA;    --Incremento del bucle&#xA;    SELECT @FechaDesde = DATEADD(DAY, 1, @FechaDesde)&#xA;    END&#xA;    COMMIT TRANSACTION&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
+              SQLTask:SqlStatementSource="USE [DWMigraciones_PM]&#xA;GO&#xA;Set Language spanish;&#xA;DECLARE @FechaDesde as smalldatetime, @FechaHasta as smalldatetime&#xA;DECLARE @FechaAAAAMMDD int&#xA;DECLARE @Año as smallint, @Trimestre char(2), @Mes smallint&#xA;DECLARE @Semana smallint, @Dia smallint, @DiaSemana smallint&#xA;DECLARE @NTrimestre char(7), @NMes char(15)&#xA;DECLARE @NMes3l char(3)&#xA;DECLARE @NSemana char(10), @NDia char(6), @NDiaSemana char(10)&#xA;--Set inicial por si no coincide con los del servidor&#xA;SET DATEFORMAT dmy&#xA;SET DATEFIRST 1&#xA;&#xA;BEGIN TRANSACTION&#xA;    --Borrar datos actuales, si fuese necesario&#xA;    --TRUNCATE TABLE FROM DI_TIEMPO&#xA;   &#xA;    --RAngo de fechas a generar: del 01/01/2006 al 31/12/Año actual+2&#xA;    SELECT @FechaDesde = CAST('20200101' AS smalldatetime)&#xA;    SELECT @FechaHasta = CAST('20220101' AS smalldatetime)&#xA;   &#xA;    WHILE (@FechaDesde &lt;= @FechaHasta) BEGIN&#xA;    SELECT @FechaAAAAMMDD = YEAR(@FechaDesde)*10000+&#xA;                            MONTH(@FechaDesde)*100+&#xA;                            DATEPART(dd, @FechaDesde)&#xA;    SELECT @Año = DATEPART(yy, @FechaDesde)&#xA;    SELECT @Trimestre = DATEPART(qq, @FechaDesde)&#xA;    SELECT @Mes = DATEPART(m, @FechaDesde)&#xA;    SELECT @Semana = DATEPART(wk, @FechaDesde)&#xA;    SELECT @Dia = RIGHT('0' + DATEPART(dd, @FechaDesde),2)&#xA;    SELECT @DiaSemana = DATEPART(DW, @FechaDesde)&#xA;    SELECT @NMes = DATENAME(mm, @FechaDesde)&#xA;    SELECT @NMes3l = LEFT(@NMes, 3)&#xA;    SELECT @NTrimestre = 'T' + CAST(@Trimestre as CHAR(1)) + '/' + RIGHT(@Año, 2)&#xA;    SELECT @NSemana = 'Sem ' +CAST(@Semana AS CHAR(2)) + '/' + RIGHT(RTRIM(CAST(@Año as CHAR(4))),2)&#xA;    SELECT @NDia = CAST(@Dia as CHAR(2)) + ' ' + RTRIM(@NMes)&#xA;    SELECT @NDiaSemana = DATENAME(dw, @FechaDesde)&#xA;    INSERT INTO DW.DimTiempo&#xA;    (&#xA;        idFecha,&#xA;        Fecha,&#xA;        Año,&#xA;        Trimestre,&#xA;        Mes,&#xA;        Semana,&#xA;        Dia,&#xA;        DiaSemana,&#xA;        NTrimestre,&#xA;        NMes,&#xA;        NMes3L,&#xA;        NSemana,&#xA;        NDia,&#xA;        NDiaSemana&#xA;    ) VALUES&#xA;    (&#xA;&#x9; @FechaDesde,&#xA;        @FechaAAAAMMDD,&#xA;        @Año,&#xA;        @Trimestre,&#xA;        @Mes,&#xA;        @Semana,&#xA;        @Dia,&#xA;        @DiaSemana,&#xA;        @NTrimestre,&#xA;        @NMes,&#xA;        @NMes3l,&#xA;        @NSemana,&#xA;        @NDia,&#xA;        @NDiaSemana&#xA;    )&#xA;   &#xA;    --Incremento del bucle&#xA;    SELECT @FechaDesde = DATEADD(DAY, 1, @FechaDesde)&#xA;    END&#xA;    COMMIT TRANSACTION&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -644,7 +644,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="INSERT DW.DimTiposAcuerdo&#xA;(Nombre)&#xA;SELECT DISTINCT A.TipoEvento &#xA;FROM [STG].[Acuerdos] A;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -661,7 +661,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="INSERT DW.[DimUNDOrganica]&#xA;(Nombre)&#xA;SELECT DISTINCT E.[UND_Organica]&#xA;FROM [STG].[Eventos] E&#xA;WHeRE E.UND_Organica is not null;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -678,8 +678,8 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
-              SQLTask:SqlStatementSource="USE DWMigraciones&#xA;DELETE DW.DimMetasProduccion&#xA;DELETE DW.DimTiempo;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
+              SQLTask:SqlStatementSource="USE DWMigraciones_PM&#xA;DELETE DW.DimMetasProduccion&#xA;DELETE DW.DimTiempo;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -789,7 +789,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="INSERT DW.HechoControlDeAcuerdos&#xA;    (IdTipoAcuerdo,IdAcuerdo,IdFecha,IdPais)&#xA;&#xA;SELECT&#xA;    DTA.IdTipoAcuerdo, DA.[IdAcuerdo] , DT.[IdFecha] , DP.IdPais&#xA;FROM STG.Acuerdos A&#xA;    LEFT JOIN DW.[DimTiposAcuerdo] DTA ON DTA.Nombre = A.TipoEvento&#xA;    LEFT JOIN DW.[DimAcuerdos] DA on DA.Nombre = A.Acuerdo&#xA;    LEFT JOIN DW.[DimTiempo] DT ON DT.IdFecha = A.Fecha&#xA;    LEFT JOIN DW.[DimPaises] DP ON DP.Nombre = A.Pais&#xA;ORDER BY DA.IdAcuerdo;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -806,7 +806,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="&#xA;INSERT DW.HechoControlDeEventos&#xA;(IdEvento , IdOrganizador , IdPais  , IdFechaFin, IdModalidad , IdRegion , IdUNDOrganica , Informe)&#xA;SELECT DE.IdEvento, DO.IdOrganizador , DP.IdPais , DTF.IdFecha , DM.IdModalidad , DR.id_region , DUN.IdUND ,&#xA;UPPER(SUBSTRING(E.Informe, 1 , 1 )) + LOWER(SUBSTRING(E.Informe, LEN(E.Informe),LEN(E.Informe)))&#xA;FROM &#xA;STG.Eventos E&#xA;LEFT JOIN DW.DimEventos DE ON DE.Nombre = E.Evento&#xA;LEFT JOIN DW.DimOrganizadores DO ON DO.Nombre = E.Organizador&#xA;LEFT JOIN DW.DimPaises DP ON DP.Nombre = E.Localidad&#xA;LEFT JOIN DW.DimTiempo DTF ON DTF.IdFecha = E.FFin&#xA;LEFT JOIN DW.DimModalidades DM on DM.Nombre = E.Modalidad&#xA;LEFT JOIN DW.DimRegiones DR ON DR.nombre = E.Region&#xA;LEFT JOIN DW.DimUNDOrganica DUN ON DUN.Nombre = E.UND_Organica;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -823,8 +823,8 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
-              SQLTask:SqlStatementSource="USE DWMigraciones&#xA;&#xA;INSERT DW.HechoPOI&#xA;    (IdMetaFisica,IdFecha,ActProgramadas,ActEjecutadas)&#xA;&#xA;SELECT&#xA;    (SELECT M.IdMetaFisica&#xA;    FROM DW.DimMetasProduccion M&#xA;    WHERE P.MetaFisica = M.Meta)as IdMetaFisica,&#xA;    (SELECT TOP 1&#xA;        ( D.IdFecha)&#xA;    FROM [DW].[DimTiempo] D&#xA;    WHERE D.Mes= P.[Mes] AND D.Año=P.[Año]&#xA;    ORDER BY D.IdFecha DESC&#xA;) AS IdFecha,&#xA;    P.[ActividadesProgramadas],&#xA;    P.ActividadesEjecutadas&#xA;FROM&#xA;    [STG].[Produccion] P;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
+              SQLTask:SqlStatementSource="USE DWMigraciones_PM&#xA;&#xA;INSERT DW.HechoPOI&#xA;    (IdMetaFisica,IdFecha,ActProgramadas,ActEjecutadas)&#xA;&#xA;SELECT&#xA;    (SELECT M.IdMetaFisica&#xA;    FROM DW.DimMetasProduccion M&#xA;    WHERE P.MetaFisica = M.Meta)as IdMetaFisica,&#xA;    (SELECT TOP 1&#xA;        ( D.IdFecha)&#xA;    FROM [DW].[DimTiempo] D&#xA;    WHERE D.Mes= P.[Mes] AND D.Año=P.[Año]&#xA;    ORDER BY D.IdFecha DESC&#xA;) AS IdFecha,&#xA;    P.[ActividadesProgramadas],&#xA;    P.ActividadesEjecutadas&#xA;FROM&#xA;    [STG].[Produccion] P;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -840,8 +840,8 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
-              SQLTask:SqlStatementSource="USE DWMigraciones&#xA;DELETE DW.HechoPOI;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
+              SQLTask:SqlStatementSource="USE DWMigraciones_PM&#xA;DELETE DW.HechoPOI;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -895,7 +895,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="&#xA;Set Language spanish;&#xA;&#xA;BULK INSERT&#xA;STG.[Acuerdos]&#xA;FROM &#xA;'C:\SNM\Informe Acuerdos SNM.csv'&#xA;WITH &#xA;(&#xA;FIRSTROW =2,&#xA;FIELDTERMINATOR = ',',&#xA;ROWTERMINATOR = '\n'&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -912,7 +912,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="Set Language spanish;&#xA;BULK INSERT&#xA;STG.Eventos&#xA;FROM &#xA;'C:\SNM\Informe Eventos SNM.csv'&#xA;WITH &#xA;(&#xA;FIRSTROW =2,&#xA;FIELDTERMINATOR = ',',&#xA;ROWTERMINATOR = '\n'&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -929,7 +929,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="BULK INSERT&#xA;STG.Produccion&#xA;FROM &#xA;'C:\SNM\Informe Actividades SNM.csv'&#xA;WITH &#xA;(&#xA;FIRSTROW =2,&#xA;FIELDTERMINATOR = ',',&#xA;ROWTERMINATOR = '\n'&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -946,7 +946,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="DELETE STG.Eventos;&#xA;DELETE STG.Acuerdos;&#xA;DELETE STG.Produccion;&#xA;TRUNCATE TABLE STG.Eventos;&#xA;TRUNCATE TABLE STG.Acuerdos;&#xA;TRUNCATE TABLE STG.Produccion;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -1001,7 +1001,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="DROP TABLE IF EXISTS DW.HechoControlDeEventos;&#xA;DROP TABLE IF EXISTS DW.HechoPOI;&#xA;DROP TABLE IF EXISTS DW.HechoControlDeAcuerdos;&#xA;&#xA;&#xA;DROP TABLE IF EXISTS DW.DimMetasProduccion;&#xA;DROP TABLE IF EXISTS DW.DimFasesProduccion;&#xA;DROP TABLE IF EXISTS DW.DimRegiones;&#xA;DROP TABLE IF EXISTS DW.DimModalidades;&#xA;DROP TABLE IF EXISTS DW.DimEventos;&#xA;DROP TABLE IF EXISTS DW.DimOrganizadores;&#xA;DROP TABLE IF EXISTS DW.DimPaises;&#xA;DROP TABLE IF EXISTS DW.DimAcuerdos;&#xA;DROP TABLE IF EXISTS DW.DimTiposAcuerdo;&#xA;DROP TABLE IF EXISTS DW.DimUNDOrganica;&#xA;DROP TABLE IF EXISTS DW.DimTiempo;&#xA;&#xA;DROP SCHEMA IF EXISTS DW;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -1030,7 +1030,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{B31592A8-8D73-45DF-8E9C-DBE9EE705715}"
+              SQLTask:Connection="{41D12EFF-A599-4266-9C96-70D22195CB2E}"
               SQLTask:SqlStatementSource="DROP TABLE IF EXISTS STG.Acuerdos;&#xA;DROP TABLE IF EXISTS STG.Eventos;&#xA;DROP TABLE IF EXISTS STG.Produccion&#xA;DROP SCHEMA IF EXISTS STG;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -1096,59 +1096,59 @@
       DTS:To="Package\Insert data tablas Hecho" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
         Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="194.4,41.6"
+          Size="194,42"
           Id="Package\Creacion de tablas Dimension\Create de Schema DW"
           TopLeft="38.359189599179,13.1470589307763" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\Creacion de tablas Dimension\Create Dimension Acuerdos"
           TopLeft="50.5836847803689,359.690761952911" />
         <NodeLayout
-          Size="163.2,41.6"
+          Size="163,42"
           Id="Package\Creacion de tablas Dimension\Create Dimension Eventos"
           TopLeft="57.9306236809963,505.435298300284" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Creacion de tablas Dimension\Create Dimension Metas Produccion"
           TopLeft="55.1142973067811,79.0453824350166" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171,42"
           Id="Package\Creacion de tablas Dimension\Create Dimension Modalidades"
           TopLeft="54.8693991390679,642.892444465234" />
         <NodeLayout
-          Size="167.2,41.6"
+          Size="167,42"
           Id="Package\Creacion de tablas Dimension\Create Dimension Organizadores"
           TopLeft="57.3183787726111,577.102525500525" />
         <NodeLayout
-          Size="156,49.6"
+          Size="156,50"
           Id="Package\Creacion de tablas Dimension\Create Dimension Paises"
           TopLeft="56.6040930461607,432.665552892322" />
         <NodeLayout
-          Size="170.4,41.6"
+          Size="170,42"
           Id="Package\Creacion de tablas Dimension\Create Dimension Regiones"
           TopLeft="53.3387868681044,714.855468575269" />
         <NodeLayout
-          Size="168,41.6"
+          Size="168,42"
           Id="Package\Creacion de tablas Dimension\Create Dimension Tiempo"
           TopLeft="49.0938890409893,213.179836470858" />
         <NodeLayout
-          Size="162.4,48"
+          Size="162,48"
           Id="Package\Creacion de tablas Dimension\Create Dimension Tipos de Acuerdo"
           TopLeft="48.88980740486,283.751266032024" />
         <NodeLayout
-          Size="176,41.6"
+          Size="176,42"
           Id="Package\Creacion de tablas Dimension\Create Dimension UND Organica"
           TopLeft="52.997289950299,779.318212479291" />
         <EdgeLayout
@@ -1374,20 +1374,20 @@
         <ContainerLayout
           HeaderHeight="43.2"
           IsExpanded="True"
-          PanelSize="268.8,876"
-          Size="268.8,919.2"
+          PanelSize="269,876"
+          Size="269,919"
           Id="Package\Creacion de tablas Dimension"
           TopLeft="321.887760583757,729.547060246085" />
         <NodeLayout
-          Size="164,60.8"
+          Size="164,61"
           Id="Package\Creacion de tablas Hecho\Create Hecho Control de Acuerdos"
           TopLeft="31.5469498849129,86.3243745632946" />
         <NodeLayout
-          Size="174.4,41.6"
+          Size="174,42"
           Id="Package\Creacion de tablas Hecho\Create Hecho Control de Eventos"
           TopLeft="27.0571538900848,176.341182548436" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Creacion de tablas Hecho\Create Hecho POI"
           TopLeft="34.302051972648,18.9378163517317" />
         <EdgeLayout
@@ -1437,24 +1437,24 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="243.2,285.6"
-          Size="243.2,328.8"
+          PanelSize="243,286"
+          Size="243,329"
           Id="Package\Creacion de tablas Hecho"
           TopLeft="635.714296540436,730.08403367473" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Creacion de tablas Stage\Create Acuerdos"
           TopLeft="59.6190538795628,86.3098099452812" />
         <NodeLayout
-          Size="196,41.6"
+          Size="196,42"
           Id="Package\Creacion de tablas Stage\Create de Schema STG"
           TopLeft="44.4580554802289,17.4478094893482" />
         <NodeLayout
-          Size="149.6,41.6"
+          Size="150,42"
           Id="Package\Creacion de tablas Stage\Create Eventos"
           TopLeft="64.5714345075651,156.769940294829" />
         <NodeLayout
-          Size="164,41.6"
+          Size="164,42"
           Id="Package\Creacion de tablas Stage\Create Produccion"
           TopLeft="62.2698471667816,237.275821764769" />
         <EdgeLayout
@@ -1526,52 +1526,52 @@
         <ContainerLayout
           HeaderHeight="43.2"
           IsExpanded="True"
-          PanelSize="297.6,398.4"
-          Size="297.6,441.6"
+          PanelSize="298,398"
+          Size="298,442"
           Id="Package\Creacion de tablas Stage"
           TopLeft="300.045356583665,210.209153274901" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Insert data tablas Dmension\Insert Dimension Acuerdos"
           TopLeft="40.0898074048602,220.531100158767" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Insert data tablas Dmension\Insert Dimension Eventos"
           TopLeft="41.1102155855032,286.816812360823" />
         <NodeLayout
-          Size="161.6,41.6"
+          Size="162,42"
           Id="Package\Insert data tablas Dmension\Insert Dimension Metas Produccion"
           TopLeft="33.967358321004,82.0184921643905" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Insert data tablas Dmension\Insert Dimension Modalidades"
           TopLeft="46.2122564887169,483.052106233333" />
         <NodeLayout
-          Size="158.4,41.6"
+          Size="158,42"
           Id="Package\Insert data tablas Dmension\Insert Dimension Organizadores"
           TopLeft="45.1918483080743,353.45546875759" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Insert data tablas Dmension\Insert Dimension Paises"
           TopLeft="48.2530728500023,618.867233034484" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Insert data tablas Dmension\Insert Dimension Regiones"
           TopLeft="51.3142973919309,686.295804463055" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Insert data tablas Dmension\Insert Dimension Tiempo"
           TopLeft="54.3755219338588,754.026897849933" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Insert data tablas Dmension\Insert Dimension Tipos de Acuerdo"
           TopLeft="45.1918483080741,551.825215415747" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Insert data tablas Dmension\Insert Dimension UND Organica"
           TopLeft="49.2734810306451,417.909251174135" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Insert data tablas Dmension\Limpieza tablas"
           TopLeft="34.9877665016465,15.2285742675558" />
         <EdgeLayout
@@ -1797,24 +1797,24 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="244.8,893.6"
-          Size="244.8,936.8"
+          PanelSize="245,894"
+          Size="245,937"
           Id="Package\Insert data tablas Dmension"
           TopLeft="936.020424103598,726.126056997479" />
         <NodeLayout
-          Size="151.2,54.4"
+          Size="151,54"
           Id="Package\Insert data tablas Hecho\Insert Hecho Control de Acuerdos"
           TopLeft="49.7857150398954,147.27899827507" />
         <NodeLayout
-          Size="187.2,41.6"
+          Size="187,42"
           Id="Package\Insert data tablas Hecho\Insert Hecho Control de Eventos"
           TopLeft="38.2081813604436,251.640341279251" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Insert data tablas Hecho\Insert Hecho POI"
           TopLeft="46.1877742867434,82.4974847614913" />
         <NodeLayout
-          Size="150.4,41.6"
+          Size="150,42"
           Id="Package\Insert data tablas Hecho\Limpieza tablas"
           TopLeft="48.5428636507111,8.80000072928033" />
         <EdgeLayout
@@ -1886,24 +1886,24 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="281.6,344.8"
-          Size="281.6,388"
+          PanelSize="282,345"
+          Size="282,388"
           Id="Package\Insert data tablas Hecho"
           TopLeft="1238.81634739398,725.277309876412" />
         <NodeLayout
-          Size="158.4,41.6"
+          Size="158,42"
           Id="Package\Insertar data Stage\Insert Acuerdos"
           TopLeft="31.2142857690245,163.233430807153" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Insertar data Stage\Insert Eventos"
           TopLeft="33.9523810537487,231.980863497881" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161,42"
           Id="Package\Insertar data Stage\Insert Produccion"
           TopLeft="30.2392290630767,93.0961756227758" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Insertar data Stage\Limpiar tablas"
           TopLeft="30.8770921595938,19.7605087022289" />
         <EdgeLayout
@@ -1975,30 +1975,30 @@
         <ContainerLayout
           HeaderHeight="43.2"
           IsExpanded="True"
-          PanelSize="229.6,412"
-          Size="229.6,455.2"
+          PanelSize="230,412"
+          Size="230,455"
           Id="Package\Insertar data Stage"
           TopLeft="637.386632169822,210.465919025216" />
         <NodeLayout
-          Size="162.4,41.6"
+          Size="162,42"
           Id="Package\Preparar Data Warehouse\Eliminar Tablas Existentes DW"
           TopLeft="25.5142973067811,25.6823548608998" />
         <ContainerLayout
           HeaderHeight="43.2"
           IsExpanded="True"
-          PanelSize="225.6,93.6"
-          Size="225.6,136.8"
+          PanelSize="226,94"
+          Size="226,137"
           Id="Package\Preparar Data Warehouse"
           TopLeft="39.4217693788319,729.652110478787" />
         <NodeLayout
-          Size="164.8,41.6"
+          Size="165,42"
           Id="Package\Preparar Stage\Eliminar Tablas Existentes STG"
           TopLeft="20.3142913463167,26.988237546307" />
         <ContainerLayout
           HeaderHeight="43.2"
           IsExpanded="True"
-          PanelSize="206.4,96.8"
-          Size="206.4,140"
+          PanelSize="206,97"
+          Size="206,140"
           Id="Package\Preparar Stage"
           TopLeft="54.2641731660502,208.48693095139" />
         <EdgeLayout
@@ -2161,30 +2161,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="878.914296540436,894.48403367473">
+          TopLeft="878.714296540436,894.58403367473">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="57.106127563162,300.042023322749"
+              EndConnector="57.3061275631621,300.042023322749"
               Start="0,0"
-              End="49.606127563162,300.042023322749">
+              End="49.8061275631621,300.042023322749">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="24.553063781581,0" />
+                    End="24.6530637815811,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="24.553063781581,0"
-                    Point2="28.553063781581,0"
-                    Point3="28.553063781581,4" />
+                    Point1="24.6530637815811,0"
+                    Point2="28.6530637815811,0"
+                    Point3="28.6530637815811,4" />
                   <mssgle:LineSegment
-                    End="28.553063781581,296.042023322749" />
+                    End="28.6530637815811,296.042023322749" />
                   <mssgle:CubicBezierSegment
-                    Point1="28.553063781581,296.042023322749"
-                    Point2="28.553063781581,300.042023322749"
-                    Point3="32.553063781581,300.042023322749" />
+                    Point1="28.6530637815811,296.042023322749"
+                    Point2="28.6530637815811,300.042023322749"
+                    Point3="32.6530637815811,300.042023322749" />
                   <mssgle:LineSegment
-                    End="49.606127563162,300.042023322749" />
+                    End="49.8061275631621,300.042023322749" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2195,30 +2195,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="1180.8204241036,1194.52605699748">
+          TopLeft="1181.0204241036,1194.62605699748">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="57.9959232903821,-275.248747121067"
+              EndConnector="57.795923290382,-275.348747121067"
               Start="0,0"
-              End="50.4959232903821,-275.248747121067">
+              End="50.295923290382,-275.348747121067">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="24.997961645191,0" />
+                    End="24.897961645191,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="24.997961645191,0"
-                    Point2="28.997961645191,0"
-                    Point3="28.997961645191,-4" />
+                    Point1="24.897961645191,0"
+                    Point2="28.897961645191,0"
+                    Point3="28.897961645191,-4" />
                   <mssgle:LineSegment
-                    End="28.997961645191,-271.248747121067" />
+                    End="28.897961645191,-271.348747121067" />
                   <mssgle:CubicBezierSegment
-                    Point1="28.997961645191,-271.248747121067"
-                    Point2="28.997961645191,-275.248747121067"
-                    Point3="32.997961645191,-275.248747121067" />
+                    Point1="28.897961645191,-271.348747121067"
+                    Point2="28.897961645191,-275.348747121067"
+                    Point3="32.897961645191,-275.348747121067" />
                   <mssgle:LineSegment
-                    End="50.4959232903821,-275.248747121067" />
+                    End="50.295923290382,-275.348747121067" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
